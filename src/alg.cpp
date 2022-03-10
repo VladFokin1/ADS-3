@@ -1,10 +1,10 @@
 // Copyright 2021 NNTU-CS
 
 int cbinsearch(int *arr, int size, int value) {
-    int i = 0, j = size - 1, count  = 0; // i - левая граница массива, j - правая, count - счетчик
-    while(i < j) {
+    int i = 0, j = size - 1, count  = 0;
+    while (i < j) {
         int mid = i + (j - i) / 2;
-        if(arr[mid] == value) {
+        if (arr[mid] == value) {
             //count+=1;
             i = mid;
             while (arr[i] == value) {
@@ -17,8 +17,7 @@ int cbinsearch(int *arr, int size, int value) {
                 count++;
                 i++;
             }
-        }
-        else if(arr[mid] > value)
+        } else if (arr[mid] > value)
             j = mid;
         else
             i = mid + 1;
